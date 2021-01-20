@@ -3,6 +3,6 @@ package main
 func main() {
 	app := &watcherserver{}
 	app.Init()
-	app.WatchDir("")
-	app.Run("10086")
+	app.WatchDir("E:\\watcher")
+	app.Run(":10086")
 }

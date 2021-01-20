@@ -18,8 +18,6 @@ func NewLocalClient() unet.Client {
 	return p
 }
 
-// ...
-
 //OnCmdMessage handle cmd message
 func (l *LocalClient) OnCmdMessage(cmd string, data []byte) error {
 
@@ -36,4 +34,9 @@ func (l *LocalClient) OnIDMessage(id int, data []byte) error {
 	l.SendIDMessage(id, data)
 
 	return nil
+}
+
+//OnInitOver ..
+func (l *LocalClient) OnInitOver() {
+	log.Println("我来了...")
 }
