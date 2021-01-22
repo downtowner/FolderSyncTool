@@ -12,7 +12,9 @@ type LocalManager struct {
 
 //Done 覆盖父类的方法
 func (l *LocalManager) Done() {
+
 	l.ConnectionMgr.Done()
+
 	if nil != l.willClose {
 		l.willClose()
 	}
